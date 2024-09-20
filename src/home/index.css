@@ -1,0 +1,32 @@
+.container{
+    border: 5px solid red;
+
+    width: 80%;
+    max-width: 1200;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.nav img {
+    width: 54px;
+    height: 54px;
+}
+
+.nav ul{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    list-style: none;
+}
+
+.nav ul a {
+    text-decoration: none;
+    color: #fff;
+}
