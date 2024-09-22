@@ -1,23 +1,21 @@
 .container {
-    border: 5px solid red;
-
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.nav {
+nav {
     display: flex;
     justify-content: space-between;
     padding-top: 50px;
 }
 
-.nav img {
+nav #logo {
     width: 54px;
     height: 54px;
 }
 
-.nav ul {
+nav ul {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -26,7 +24,147 @@
     list-style: none;
 }
 
-.nav ul a {
+nav ul a {
     text-decoration: none;
     color: #fff;
+    transition: 0.4s;
+}
+
+nav ul a:hover {
+    color: #8b5cf6;
+}
+
+.barra {
+    border-left: 1px solid #fff;
+    height: 30px;
+}
+
+.btn-outline {
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.btn-outline:hover {
+    border: 1px solid #8b5cf6;
+}
+
+.btn {
+    border: 1px solid #8b5cf6;
+    background-color: #8b5cf6;
+    padding: 10px 15px;
+    border-radius: 5px;
+
+    text-decoration: none;
+    color: #fff;
+    transition: 0.4s;
+}
+
+nav ul a.btn:hover,
+.btn:hover {
+    border: 1px solid #ae96e7;
+    background-color: #ae96e7;
+    color: #fff;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding-top: 5rem;
+
+    /* TAMANHO TIPO PIXEL, SÓ QUE MUITO USADO PRA RESPONSIVIDADE */
+    /* 1rem = 16px */
+    /* 5rem = 5*16px = 80px */
+
+    /* no mobile... troca o tamanho "root" font-size na tag HTML */
+    /* font-size: 14px */
+    /* 1rem = 14px */
+    /* 5rem = 5*14px = 70px */
+}
+
+.content {
+    width: 40%;
+    min-width: 300px;
+}
+
+.content h2 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #8b5cf6;
+    letter-spacing: 2px;
+}
+
+.content h1 {
+    margin-top: 20px;
+    font-size: 2.2rem;
+}
+
+.content p {
+    margin: 20px 0 60px 0;
+    font-weight: 300;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+
+.content .mini-message {
+    font-size: 0.85rem;
+}
+
+.dashboard {
+    width: 55%;
+    min-width: 300px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.group-blocks {
+    width: 45%;
+    /* min-width: 270px; */
+}
+
+.bloco {
+    height: 120px;
+    background-color: #444;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.bloco-maior {
+    height: 300px;
+    background: rgb(53, 56, 73);
+    background: linear-gradient(145deg, rgba(53, 56, 73, 1) 0%, rgba(52, 63, 80, 1) 60%, rgba(41, 121, 141, 1) 100%);
+}
+
+.bloco-menor {
+    height: 120px;
+    background: rgb(53,56,73);
+    background: linear-gradient(145deg, rgba(53,56,73,1) 0%, rgba(58,59,82,1) 65%, rgba(97,80,151,1) 100%);
+}
+
+@media screen and (max-width: 860px) {
+    nav ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 833px) {
+    .hero {
+        padding-top: 3rem;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .dashboard {
+        width: 100%;
+        justify-content: center;
+    }
 }
